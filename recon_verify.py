@@ -17,3 +17,10 @@ recon_img = np.reshape(recon_img, input_face.shape)
 recon_img_normalized = 255 * (recon_img - recon_img.min()) / (recon_img.max() - recon_img.min())
 
 cv2.imwrite("recon_img.jpg", recon_img_normalized.astype(np.uint8))
+
+print("\nVerifying eigen calculations for matrix: ")
+test_matrix = np.array([[1, 2, 0], [2, 6, 1], [0, 1, 1]])
+print(test_matrix)
+values, vectors = np.linalg.eig(test_matrix)
+print(f"Values: {values}")
+print(f"Vectors: {vectors}")
