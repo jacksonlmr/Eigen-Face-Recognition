@@ -7,7 +7,6 @@ import os
 # parse cmd line args 
 parser = argparse.ArgumentParser()
 
-# parser.add_argument('filename', help='Path to image file to identify')
 parser.add_argument('test_data_path', help='Path to directory containing test data')
 parser.add_argument('training_results_path', help='Path to folder in which training results were stored')
 parser.add_argument('-t', '--infothreshold', type=float, default=.95, help='Proportion of information to preserve')
